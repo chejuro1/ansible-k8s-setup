@@ -1,12 +1,12 @@
 - hosts: all
   become: yes
   tasks:
-
-   - name: disable firewall service for labs
-     service:
-        name: firewalld
-        state: stopped
-        enabled: false
+  
+  # - name: disable firewall service for labs
+  #   service:
+  #      name: firewalld
+  #      state: stopped
+  #      enabled: false
 
    - name: Disable SWAP 
      shell: |
@@ -17,7 +17,7 @@
        path: /etc/fstab
        regexp: 'swap'
        state: absent
-
+ 
    - name: install Docker
      yum:
        name: docker
