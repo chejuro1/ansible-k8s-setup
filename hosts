@@ -1,6 +1,6 @@
 [masters]
-master.example.com
+ip-172-31-24-76.ec2.internal
 
 [workers]
-nodeone.example.com
-nodetwo.example.com
+ip-172-31-89-247.ec2.internal
+
