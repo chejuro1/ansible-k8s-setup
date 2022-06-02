@@ -18,6 +18,10 @@
        regexp: 'swap'
        state: absent
  
+   - name: install updates
+     yum: update_cache=yes
+     when: ansible_os_family == "RedHat"
+     
    - name: Add docker repository
      get_url:
       url: https://download.docker.com/linux/centos/docker-ce.repo
